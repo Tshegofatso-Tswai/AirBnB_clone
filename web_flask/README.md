@@ -13,8 +13,8 @@ The app can be accessed at 0.0.0.0:5000/hbnb.
 
 Screenshots:
 
-HolbertonBnB logo
+[HolbertonBnB logo](https://github.com/anteneh2121/AirBnB_clone_v2/raw/main/web_flask/static/images/hbnb_screenshot_0.png)
 
-HolbertonBnB logo
+[HolbertonBnB logo](https://github.com/anteneh2121/AirBnB_clone_v2/raw/main/web_flask/static/images/hbnb_screenshot_1.png)
 
-HolbertonBnB logo
+[HolbertonBnB logo](https://github.com/anteneh2121/AirBnB_clone_v2/raw/main/web_flask/static/images/hbnb_screenshot_2.png)
