@@ -16,7 +16,7 @@ The `console.py` file contains the entry point for the command interpreter. It u
 To run the console, use the following command:
 ```bash
 ./console.py
-
+```
 ### Environment
 Language: Python3
 OS: Ubuntu 20.04 LTS
