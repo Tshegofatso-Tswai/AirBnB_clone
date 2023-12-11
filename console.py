@@ -11,6 +11,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
+import shlex
 
 
 class HBNBCommand(cmd.Cmd):
@@ -47,10 +48,10 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """Print string representation: name and id"""
-        if len(line) == 0:
+        if not line:
             print("** class name missing **")
             return
-        args = parse(line)
+        args = line.split()
         if args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
@@ -66,10 +67,10 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """Destroy instance specified by user; Save changes to JSON file"""
-        if len(line) == 0:
+        if not line:
             print("** class name missing **")
             return
-        args = parse(line)
+        args = line.split()
         if args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
             return
@@ -100,24 +101,20 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_update(self, line):
+        def do_update(self, line):
         """Update if given exact object, exact attribute"""
-        args = parse(line)
+        args = shlex.split(line)  # Use shlex for improved argument parsing
         if len(args) >= 4:
             key = "{}.{}".format(args[0], args[1])
-            cast = type(eval(args[3]))
-            arg3 = args[3]
-            arg3 = arg3.strip('"')
-            arg3 = arg3.strip("'")
-            setattr(storage.all()[key], args[2], cast(arg3))
+            setattr(storage.all()[key], args[2], eval(args[3]))
             storage.all()[key].save()
-        elif len(args) == 0:
+        elif not args:
             print("** class name missing **")
         elif args[0] not in HBNBCommand.classes:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
-        elif ("{}.{}".format(args[0], args[1])) not in storage.all().keys():
+        elif "{}.{}".format(args[0], args[1]) not in storage.all().keys():
             print("** no instance found **")
         elif len(args) == 2:
             print("** attribute name missing **")
