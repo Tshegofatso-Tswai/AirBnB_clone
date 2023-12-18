@@ -1,18 +1,18 @@
-.places {
+/*.places {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin: 45px auto;
 	text-align: center;
 }
-/*.places {
+*/
+.places {
 	display: flex;
 	justify-content: space-around; /* Adjust the spacing between articles */
 	flex-wrap: wrap;
 	margin: 45px auto;
 }
-*/
-
+/*
 article {
 	display: flex;
 	width: 390px;
@@ -30,7 +30,8 @@ article {
 	border: 1px solid #FF5A5F;
 	border-radius: 4px;
 }
-/*article {
+*/
+article {
 	display: flex;
 	flex-direction: column; /* Change the direction to column for flex items */
 	width: 300px; /* Adjust the width as needed */
@@ -38,8 +39,7 @@ article {
 	border: 1px solid #FF5A5F;
 	border-radius: 4px;
 }
-*/
-
+/*
 .headline {
 	display: flex;
 	flex-direction: row;
@@ -48,16 +48,15 @@ article {
 	height: 80px;	
 	width: 100%;
 }
-
-/*.headline {
+*/
+.headline {
 	display: flex;
 	flex-direction: column; /* Align the title and price in a column */
 	position: relative;
 	height: auto;
 	width: 100%;
 }
-*/
-
+/*
 .price_by_night {
 	display: flex;
 	justify-content: center;
@@ -76,8 +75,8 @@ article {
 	min-width: 60px;
 	height: 60px;
 }
+*/
 
-/*
 .price_by_night {
 	align-self: flex-end; /* Align the price to the right */
 	margin-top: auto;
@@ -91,8 +90,7 @@ article {
 	min-width: 40px;
 	height: 40px;
 }
-*/
-
+/*
 .information {
 	display: block;
 	height: 80px;
@@ -105,8 +103,8 @@ article {
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+*/
 
-/*
 .information {
 	display: flex;
 	flex-wrap: wrap; /* Wrap the information items */
@@ -120,34 +118,33 @@ article {
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
-*/
-
+/*
 .max_guest, .number_rooms, .number_bathrooms {
 	display: inline-block;
 	width: 100px;
 	text-align: center;
 	margin: 0px auto;
 }
+*/
 
-/*
 .max_guest, .number_rooms, .number_bathrooms {
 	flex-basis: calc(33.33% - 10px); /* Adjust the basis for even spacing */
 	text-align: center;
 	margin: 0px auto;
 }
-*/
 
+/*
 .user {
 	margin-top: 5px;
 	margin-bottom: 5px;	
 }
+*/
 
-/*
 .user {
 	margin-top: 10px; /* Adjust top margin for better spacing */
 	margin-bottom: 10px;
 }
-*/
+
 
 .description {
 	text-align: left;
